@@ -1,0 +1,131 @@
+@use "common" as *;
+
+// !　グローバルスタイル
+body {
+  font-family: sans-serif;
+  background-color: $cCharcoalGray;
+  color: $cOffWhite;
+}
+
+input {
+  border-radius: 10px;
+  border: none;
+  padding: 6px 16px;
+}
+
+// ボタンの基本スタイル
+.btn {
+  border-radius: 8px;
+  border: none;
+  padding: 4px 16px;
+  margin: 0 2px;
+  transition: all 0.2s;
+
+  // ホバー時の基本スタイル
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translate(2px, -2px);
+  }
+
+  // クリック時の基本スタイル
+  &:active {
+    transform: none;
+  }
+
+  &__add {
+    color: $cGray;
+  }
+
+  // 完了ボタンのスタイル
+  &__complete {
+    background-color: #00abd5;
+    color: $cOffWhite;
+
+    &:hover {
+      background-color: #33c8ce;
+    }
+  }
+
+  // 削除ボタンのスタイル
+  &__delete {
+    background-color: #ff5722;
+    color: $cOffWhite;
+
+    &:hover {
+      background-color: #d32f2f;
+    }
+  }
+
+  // 戻すボタンのスタイル
+  &__undo {
+    background-color: #393e46;
+    color: $cOffWhite;
+
+    &:hover {
+      background-color: #555e66;
+    }
+  }
+}
+
+// インプットエリアのスタイル
+.input-area {
+  background-color: $cDeepGreen;
+  border-radius: 8px;
+  width: 50%;
+  height: 10vh;
+  margin: 50px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 未完了、完了エリアの共通スタイル
+.incomplete-area,
+.complete-area {
+  border-radius: 8px;
+  width: 50%;
+  min-height: 50vh;
+  padding: 20px 40px;
+  margin: 50px;
+}
+
+// 未完了エリアのスタイル
+.incomplete-area {
+  background-color: $cOffWhite;
+  color: $cGray;
+
+  &__li {
+    list-style: circle;
+  }
+}
+
+// 完了エリアのスタイル
+.complete-area {
+  background-color: $cOffBlack;
+  color: $cOffWhite;
+
+  &__li {
+    list-style-type: circle;
+  }
+}
+
+// タイトルのスタイル
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+// To-doリストを横に並べる
+.list-row {
+  display: flex;
+  align-items: center;
+}
+
+// To-do要素の間隔をあける
+.todo-item {
+  margin: 10px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div class="input-area">
+      <input type="text" placeholder="TODOを入力" />
+      <button class="btn btn__add">追加</button>
+    </div>
+    <div class="incomplete-area">
+      <p class="title">未完了のTODO</p>
+      <ul class="incomplete-area__ul">
+        <li class="incomplete-area__li">
+          <div class="list-row">
+            <p class="todo-item">買い物</p>
+            <button class="btn btn__complete">完了</button>
+            <button class="btn btn__delete">削除</button>
+          </div>
+        </li>
+        <li class="incomplete-area__li">
+          <div class="list-row">
+            <p class="todo-item">買い物</p>
+            <button class="btn btn__complete">完了</button>
+            <button class="btn btn__delete">削除</button>
+          </div>
+        </li>
+        <li class="incomplete-area__li">
+          <div class="list-row">
+            <p class="todo-item">買い物</p>
+            <button class="btn btn__complete">完了</button>
+            <button class="btn btn__delete">削除</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="complete-area">
+      <p class="title">完了のTODO</p>
+      <ul class="complete-area__ul">
+        <li class="complete-area__li">
+          <div class="list-row">
+            <p class="todo-item">洗濯</p>
+            <button class="btn btn__undo">戻す</button>
+          </div>
+        </li>
+        <li class="complete-area__li">
+          <div class="list-row">
+            <p class="todo-item">洗濯</p>
+            <button class="btn btn__undo">戻す</button>
+          </div>
+        </li>
+        <li class="complete-area__li">
+          <div class="list-row">
+            <p class="todo-item">洗濯</p>
+            <button class="btn btn__undo">戻す</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="./main.mjs" type="module"></script>
+  </body>
+</html>
