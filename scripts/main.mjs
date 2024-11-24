@@ -29,8 +29,11 @@ const onClickAdd = () => {
   const deleteBtn = document.createElement("button");
   deleteBtn.className = "btn btn__delete";
   deleteBtn.innerText = "削除";
+
+  // 削除ボタンが押された時の処理
   deleteBtn.addEventListener("click", () => {
-    alert("削除");
+    const deleteTarget = deleteBtn.closest("li");
+    document.querySelector(".incomplete-area__ul").removeChild(deleteTarget);
   });
 
   // 親子関係を設定
