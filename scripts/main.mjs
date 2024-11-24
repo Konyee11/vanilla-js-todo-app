@@ -4,6 +4,12 @@ const onClickAdd = () => {
   const inputText = document.getElementById("add-text").value;
   document.getElementById("add-text").value = "";
 
+  // 未完了リストにTODOを追加
+  createIncompleteTodo(inputText);
+};
+
+// 渡された引数をもとに未完了のTODOを作成する関数
+const createIncompleteTodo = (todo) => {
   // li生成
   const li = document.createElement("li");
   li.className = "incomplete-area__li";
@@ -15,7 +21,7 @@ const onClickAdd = () => {
   // p生成
   const p = document.createElement("p");
   p.className = "todo-item";
-  p.innerText = inputText;
+  p.innerText = todo;
 
   // btn(完了)生成
   const completeBtn = document.createElement("button");
@@ -32,10 +38,17 @@ const onClickAdd = () => {
     // 完了ボタン自身を削除
     completeBtn.remove();
 
-    // 戻すボタンを生成してdivタグ配下に追加する
+    // 戻すボタンを生成してdivタグ配下に追加
     const undoBtn = document.createElement("button");
     undoBtn.className = "btn btn__undo";
     undoBtn.innerText = "戻す";
+    undoBtn.addEventListener("click", () => {
+      // To-doの内容を取得し、未完了リストに追加
+      const todoText = undoBtn.previousElementSibling.innerText;
+      createIncompleteTodo(todoText);
+      // 押された戻すボタンの属するli要素を削除
+      undoBtn.closest("li").remove();
+    });
     moveTarget.firstElementChild.appendChild(undoBtn); // divタグ配下に戻すボタンを配置
 
     // 完了リストに移動
