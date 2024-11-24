@@ -8,17 +8,19 @@
     <title>Todo App</title>
   </head>
   <body>
-    <div class="input-area">
-      <input id="add-text" type="text" placeholder="TODOを入力" />
-      <button id="add-button" class="btn btn__add">追加</button>
-    </div>
-    <div class="incomplete-area">
-      <p class="title">未完了のTODO</p>
-      <ul class="incomplete-area__ul"></ul>
-    </div>
-    <div class="complete-area">
-      <p class="title">完了のTODO</p>
-      <ul class="complete-area__ul"></ul>
+    <div id="container">
+      <div class="input-area">
+        <input id="add-text" type="text" placeholder="TODOを入力" />
+        <button id="add-button" class="btn btn__add">追加</button>
+      </div>
+      <div class="incomplete-area">
+        <p class="title">未完了のTODO</p>
+        <ul class="incomplete-area__ul"></ul>
+      </div>
+      <div class="complete-area">
+        <p class="title">完了のTODO</p>
+        <ul class="complete-area__ul"></ul>
+      </div>
     </div>
 
     <script src="scripts/main.mjs" type="module"></script>
