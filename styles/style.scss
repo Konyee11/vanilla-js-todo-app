@@ -5,12 +5,29 @@ body {
   font-family: sans-serif;
   background-color: $cCharcoalGray;
   color: $cOffWhite;
+  font-size: 14px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
 
 input {
   border-radius: 10px;
   border: none;
   padding: 6px 16px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  list-style: circle;
 }
 
 // ボタンの基本スタイル
@@ -68,47 +85,56 @@ input {
   }
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  gap: 20px;
+  width: 100%;
+}
+
 // インプットエリアのスタイル
 .input-area {
   background-color: $cDeepGreen;
   border-radius: 8px;
-  width: 50%;
-  height: 10vh;
-  margin: 50px;
-  gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  max-width: 320px;
+  width: 90%;
+  padding: 7px;
+
+  @media (min-width: 768px) {
+    max-width: 500px;
+  }
 }
 
 // 未完了、完了エリアの共通スタイル
 .incomplete-area,
 .complete-area {
   border-radius: 8px;
-  width: 50%;
-  min-height: 50vh;
-  padding: 20px 40px;
-  margin: 50px;
+  max-width: 320px;
+  width: 90%;
+  min-height: 37vh;
+  padding: 10px;
+
+  @media (min-width: 768px) {
+    max-width: 500px;
+  }
 }
 
 // 未完了エリアのスタイル
 .incomplete-area {
   background-color: $cOffWhite;
   color: $cGray;
-
-  &__li {
-    list-style: circle;
-  }
 }
 
 // 完了エリアのスタイル
 .complete-area {
   background-color: $cOffBlack;
   color: $cOffWhite;
-
-  &__li {
-    list-style-type: circle;
-  }
 }
 
 // タイトルのスタイル

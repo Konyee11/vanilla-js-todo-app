@@ -8,12 +8,31 @@ body {
   font-family: sans-serif;
   background-color: #222831;
   color: #eeeeee;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 input {
   border-radius: 10px;
   border: none;
   padding: 6px 16px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  list-style: circle;
 }
 
 .btn {
@@ -56,41 +75,55 @@ input {
   background-color: #555e66;
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  gap: 20px;
+  width: 100%;
+}
+
 .input-area {
   background-color: #2b7a78;
   border-radius: 8px;
-  width: 50%;
-  height: 10vh;
-  margin: 50px;
-  gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  max-width: 320px;
+  width: 90%;
+  padding: 7px;
+}
+@media (min-width: 768px) {
+  .input-area {
+    max-width: 500px;
+  }
 }
 
 .incomplete-area,
 .complete-area {
   border-radius: 8px;
-  width: 50%;
-  min-height: 50vh;
-  padding: 20px 40px;
-  margin: 50px;
+  max-width: 320px;
+  width: 90%;
+  min-height: 37vh;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .incomplete-area,
+  .complete-area {
+    max-width: 500px;
+  }
 }
 
 .incomplete-area {
   background-color: #eeeeee;
   color: #666;
 }
-.incomplete-area__li {
-  list-style: circle;
-}
 
 .complete-area {
   background-color: #1c1c1c;
   color: #eeeeee;
-}
-.complete-area__li {
-  list-style-type: circle;
 }
 
 .title {
