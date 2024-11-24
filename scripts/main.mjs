@@ -21,8 +21,25 @@ const onClickAdd = () => {
   const completeBtn = document.createElement("button");
   completeBtn.className = "btn btn__complete";
   completeBtn.innerText = "完了";
+
+  // 完了ボタンが押された時の処理
   completeBtn.addEventListener("click", () => {
-    alert("完了");
+    const moveTarget = completeBtn.closest("li");
+
+    // 完了ボタンの次の要素である削除ボタンを削除
+    completeBtn.nextElementSibling.remove();
+
+    // 完了ボタン自身を削除
+    completeBtn.remove();
+
+    // 戻すボタンを生成してdivタグ配下に追加する
+    const undoBtn = document.createElement("button");
+    undoBtn.className = "btn btn__undo";
+    undoBtn.innerText = "戻す";
+    moveTarget.firstElementChild.appendChild(undoBtn); // divタグ配下に戻すボタンを配置
+
+    // 完了リストに移動
+    document.querySelector(".complete-area__ul").appendChild(moveTarget);
   });
 
   // btn(削除)生成
