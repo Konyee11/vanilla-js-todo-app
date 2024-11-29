@@ -49,6 +49,6 @@ vanilla-js-todo-app/
 - Building a responsive UI with CSS | CSSを使ったレスポンシブUIの構築
 
 ## Author | 作成者
-- 小西巧真
-- 京都産業大学 情報理工学部
-- [Gmail](t.konishi0527@gmail.com)
+- 氏名：小西巧真
+- 大学：京都産業大学 情報理工学部
+- Email：[t.konishi0527@gmail.com](t.konishi0527@gmail.com)
